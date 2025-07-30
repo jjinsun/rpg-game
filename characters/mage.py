@@ -13,7 +13,8 @@ class Mage(Character):
         if self.mana < 20:
             print(f"{self.name}의 마나가 부족합니다! (남은 마나: {self.mana})")
             raise Exception("마나 부족")
-        print(f"{self.name}의 [파이어볼]!")
+        
+        print(f"{self.name}의 파이어볼🔥!")
         damage = int(self.attack_power * 1.5)
         target.take_damage(damage)
         self.mana -= 20

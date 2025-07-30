@@ -10,7 +10,7 @@ class Rogue(Character):
         target.take_damage(self.attack_power)
 
     def special_attack(self, target):
-        print(f"{self.name}의 [급습]!")
+        print(f"{self.name}의 급습⚔️!")
         if random.random() < 0.7:
             damage = self.attack_power * 3
             print("급습 성공!")

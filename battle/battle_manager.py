@@ -4,9 +4,9 @@ import time
 class BattleManager:
     def start_battle(self, player, enemy):
         print(f"\n--- {player.get_name()} vs {enemy.get_name()} 전투 시작! ---")
-        participants = [player, enemy]
-        attacker_idx = random.randint(0, 1)
-        defender_idx = 1 - attacker_idx
+        participants = [player, enemy] # "누가 먼저 공격할지"를 랜덤으로 정함.
+        attacker_idx = random.randint(0, 1)  # 0이면 participants[0](player), 1이면 participants[1](enemy)이 먼저 공격자가 됨.
+        defender_idx = 1 - attacker_idx # 방어자 = 1-공격자
 
         while player.is_alive() and enemy.is_alive():
             attacker = participants[attacker_idx]

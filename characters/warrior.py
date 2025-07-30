@@ -9,7 +9,7 @@ class Warrior(Character):
         target.take_damage(self.attack_power)
 
     def special_attack(self, target):
-        print(f"{self.name}의 [강력한 일격]!")
+        print(f"{self.name}의 강력한 일격💣!")
         damage = self.attack_power * 2
         target.take_damage(damage)
         self.health -= 5  # 본인 체력 5 감소
